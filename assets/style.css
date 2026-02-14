@@ -240,12 +240,6 @@ video{
   border:1px solid #ddd;
 }
 
-.pager button{
-  padding:6px 10px;
-  border:1px solid #ddd;
-  background:#fff;
-  cursor:pointer;
-}
 
 #teaser-results .pager{
   display:none;
@@ -328,4 +322,42 @@ video{
   line-height: 1.6;
   color: #444;
   margin: 8px 0 20px 0;     /* 和下面内容拉开点距离 */
+}
+
+/* ===== Pager: big & centered ===== */
+
+.pager {
+  display: flex;
+  justify-content: center;   /* ⭐ 整体居中 */
+  align-items: center;
+  gap: 24px;                 /* 按钮间距 */
+  margin: 18px 0 10px;
+}
+
+.pager button {
+  padding: 14px 28px;        /* ⭐ 放大按钮 */
+  font-size: 20px;           /* ⭐ 字体变大 */
+  font-weight: 600;
+  border-radius: 999px;      /* 胶囊形 */
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pager button:hover {
+  background: #eee;
+}
+
+.pager button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Page x / y 文本 */
+.pager span {
+  font-size: 18px;
+  color: #444;
+  min-width: 120px;          /* ⭐ 防止跳动 */
+  text-align: center;
 }
