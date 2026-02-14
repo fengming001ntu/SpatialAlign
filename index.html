@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SpatialAlign</title>
+  <meta name="description" content="Project page for YourProject." />
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- Icons (optional). If you want zero external deps, remove this and the <svg> icons below still work. -->
+</head>
+
+<body>
+  <main class="page">
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <div class="container center">
+        <!-- Big Title -->
+        <h1 class="title">
+          SpatialAlign: Aligning Dynamic Spatial Relationships in Video Generation
+        </h1>
+
+        <!-- Authors -->
+        <p class="authors">
+          Fengming Liu,
+          <a href="https://personal.ntu.edu.sg/astjcham/" target="_blank" rel="noopener">Tat-Jen Cham</a>,
+          <a href="https://physicalvision.github.io/people/~chuanxia" target="_blank" rel="noopener">Chuanxia Zheng</a>
+        </p>
+
+        <!-- Affiliations -->
+        <p class="affils">
+          <span>Nanyang Technological University</span>
+        </p>
+
+        <!-- Venue + Highlight -->
+        <!-- <p class="venue">
+          ICML 2026
+        </p> -->
+
+        <!-- Buttons -->
+        <div class="btn-row">
+          <a class="pill" href="#" target="_blank" rel="noopener">
+            <!-- paper icon -->
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 2h9l3 3v17H6V2zm9 1.5V6h2.5L15 3.5zM8 9h8v1.5H8V9zm0 3h8v1.5H8V12zm0 3h6v1.5H8V15z"/>
+            </svg>
+            <span>Paper</span>
+          </a>
+
+          <a class="pill" href="#" target="_blank" rel="noopener">
+            <!-- github icon -->
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.36-1.34-3.36-1.34-.45-1.14-1.1-1.45-1.1-1.45-.9-.61.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.54 2.36 1.09 2.94.83.09-.65.35-1.09.64-1.34-2.21-.25-4.54-1.11-4.54-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.8c.85 0 1.7.11 2.5.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.69.92.69 1.86v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/>
+            </svg>
+            <span>Code</span>
+          </a>
+
+          <a class="pill"
+             href="https://huggingface.co/spaces/<USER>/<SPACE>"
+             target="_blank"
+             rel="noopener">
+
+            <!-- huggingface icon（可选，下面有说明） -->
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <text x="2" y="18" font-size="16">🤗</text>
+            </svg>
+
+            <span>Demo</span>
+          </a>
+          
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Teaser (Results Preview) ===== -->
+    <section class="block" id="teaser-results">
+      <div class="container">
+        <!-- <h2 class="h2 center">Teaser</h2> -->
+
+        <div class="results-embed">
+          <!-- pager 保留但会被 JS/CSS 自动隐藏（因为只有 1 页） -->
+          <div class="results-header">
+            <div class="pager">
+              <button id="prevBtn" type="button">Prev</button>
+              <span id="pageInfo">Page 1 / 1</span>
+              <button id="nextBtn" type="button">Next</button>
+            </div>
+          </div>
+
+          <div id="container"></div>
+        </div>
+
+        <p class="caption center">
+          <strong>SPATIALALIGN</strong>: dynamic spatial relationships are better aligned.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Abstract ===== -->
+    <section class="block">
+      <div class="container">
+        <h2 class="h2 center">Abstract</h2>
+        <p class="abstract">
+          Most text-to-video (T2V) generators prioritize
+          aesthetic quality, but often ignoring the spatial
+          constraints in the generated videos. In this work,
+          we present <strong>SPATIALALIGN</strong>, a self-improvement
+          framework that enhances T2V models’ capabilities to depict Dynamic Spatial Relationships
+          (DSR) specified in text prompts. We present a
+          zeroth-order regularized Direct Preference Optimization (DPO) to fine-tune T2V models towards better alignment with DSR. Specifically,
+          we design <strong>DSR-SCORE</strong>, a geometry-based metric that quantitatively measures the alignment between generated videos and the specified DSRs in
+          prompts, which is a step forward from prior works
+          that rely on VLM for evaluation. We also conduct
+          a dataset of text-video pairs with diverse DSRs to
+          facilitate the study. Extensive experiments demonstrate that our fine-tuned model significantly outperforms the baseline in spatial relationships.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Method ===== -->
+    <section class="block">
+      <div class="container">
+        <h2 class="h2">Method</h2>
+        <div class="figure">
+          <img src="assets/pipeline.png" alt="Method figure" />
+        </div>
+        <p class="caption">
+          <strong>Overview of SpatialAlign.</strong>
+          <strong>(A)</strong> Given a text prompt,
+          the pre-trained T2V model generates several video samples.
+          For each sample, we first use GroundedSAM to obtain the bboxes of the animal and the object in each frame.
+          <strong>(B)</strong> Then, for each frame, we compute the Static Spatial Relationship (SSR) Score based on the bboxes.
+          From the SSR Score Sequence (all frames), we derive four metric components that are aggregated into the DSR-SCORE, which quantifies how well the video aligns with the dynamic spatial relationship (DSR).
+          <strong>(C)</strong> During DPO training, we identify winner/loser pairs based on the DSR-SCORE using a threshold.
+          We then train a LoRA to enhance the model's ability to accurately represent DSR in generated videos, using our proposed zero-order regularized DPO. 
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Results (3 rows × 4 methods) ===== -->
+    <section class="block" id="results">
+      <div class="container">
+        <h2 class="h2">Results</h2>
+
+        <p class="results-desc">
+          Remark: INVALID means the video does not satisfy the one-animal-one-object criterion
+        </p>
+
+        <div class="results-embed">
+          <div class="results-header">
+            <div class="pager">
+              <button id="prevBtn_r" type="button">Prev</button>
+              <span id="pageInfo_r">Page 1 / 1</span>
+              <button id="nextBtn_r" type="button">Next</button>
+            </div>
+          </div>
+
+          <div id="container_r"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== BibTeX ===== -->
+    <section class="block" id="bibtex">
+      <div class="container">
+        <h2 class="h2">BibTeX</h2>
+        <pre class="bib"><code>@misc{spatialalign2026,
+  title  = {SpatialAlign: Aligning Dynamic Spatial Relationships in Video Generation},
+  author = {Fengming Liu, Tat-Jen Cham and Chuanxia Zheng},
+  year   = {2026},
+  eprint = {xxxx.xxxxx},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container">
+        <!-- <p class="footer-text">
+          This website is licensed under a
+          <a href="#" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+        <p class="footer-text">
+          
+        </p> -->
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/example_teaser.js"></script>
+  <script src="assets/app_teaser.js"></script>
+  <script src="assets/example_result.js"></script>
+  <script src="assets/app_result.js"></script>
+</body>
+</html>
