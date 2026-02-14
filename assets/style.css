@@ -1,0 +1,331 @@
+/* ===== Base ===== */
+:root{
+  --text:#111;
+  --muted:#444;
+  --link:#1a73e8;     /* Google-like blue */
+  --highlight:#e53935;/* red for Highlight */
+  --bg:#fff;
+  --max:1100px;
+
+  --title:40px;       /* big like the screenshot */
+  --h2:44px;
+  --body:19px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.45;
+}
+
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.page{ width:100%; }
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.center{ text-align:center; }
+
+/* ===== Header ===== */
+.header{
+  padding: 28px 0 18px;
+}
+.logo-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom: 10px;
+}
+.logo{
+  height: 66px;
+  width: auto;
+  display:block;
+}
+
+.title{
+  font-size: var(--title);
+  font-weight: 1000;         
+  letter-spacing: -0.02em;
+  margin: 8px 0 10px;
+}
+
+.authors{
+  font-size: 22px;
+  margin: 6px 0 6px;
+}
+.authors sup{ font-size: 60%; vertical-align: super; }
+
+.affils{
+  font-size: 24px;
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+.affils sup{ font-size: 60%; vertical-align: super; color: var(--muted); }
+
+.venue{
+  font-size: 26px;
+  margin: 10px 0 18px;
+  color: var(--muted);
+}
+.highlight{
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+/* ===== Pills ===== */
+.btn-row{
+  display:flex;
+  justify-content:center;
+  gap: 18px;
+  flex-wrap:wrap;
+  margin: 0 0 8px;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #2f2f2f;  /* dark gray like screenshot */
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.pill:hover{ text-decoration:none; filter: brightness(1.05); }
+
+.ico{
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  flex: 0 0 auto;
+}
+
+/* ===== Blocks ===== */
+.block{
+  padding: 30px 0;
+}
+
+.teaser{
+  margin-top: 8px;
+}
+.teaser img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.h2{
+  font-size: var(--h2);
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.abstract{
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: var(--body);
+  color: var(--muted);
+}
+
+.figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.caption{
+  margin: 12px 0 0;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+/* ===== BibTeX ===== */
+.bib{
+  margin: 14px 0 0;
+  padding: 18px 18px;
+  border-radius: 8px;
+  background: #f3f3f3;  /* light gray box */
+  overflow:auto;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.bib code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #222;
+}
+
+/* ===== Footer ===== */
+.footer{
+  padding: 40px 0 70px;
+}
+.footer-text{
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 980px;
+  margin: 10px auto 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+  :root{
+    --title:44px;
+    --h2:34px;
+    --body:18px;
+  }
+  .authors{ font-size: 18px; }
+  .affils{ font-size: 19px; }
+  .venue{ font-size: 20px; }
+  .pill{ font-size: 18px; padding: 10px 18px; }
+}
+
+/* ===== Results grid ===== */
+
+:root { --base-width: 1440; }
+
+#scale-root{
+  width: calc(var(--base-width) * 1px);
+  position: relative;
+  left: 50%;
+  transform-origin: top center;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.item { display:flex; flex-direction:column; }
+
+.prompt{
+  font-size:24px;
+  line-height:1.5;
+  margin-bottom:10px;
+
+  height: 4.5em;              /* = 3 行文字 */
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;      /* 最多3行 */
+  -webkit-box-orient: vertical;
+}
+
+.videos{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.video-label{
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+video{
+  width:100%;
+  display:block;
+  border:1px solid #ddd;
+  background:#f2f2f2;
+}
+
+.curve{
+  width:100%;
+  margin-top:8px;
+  border:1px solid #ddd;
+}
+
+.pager button{
+  padding:6px 10px;
+  border:1px solid #ddd;
+  background:#fff;
+  cursor:pointer;
+}
+
+#teaser-results .pager{
+  display:none;
+}
+
+/* ===== Results v2: 3 rows × 4 methods ===== */
+
+#container_r{
+  display: grid;
+  grid-template-columns: 1fr;  /* 每条样例占一整行（= 3 行） */
+  gap: 26px;
+}
+
+.item-r{
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-r{
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+
+  /* 可选：固定高度，保证每行对齐 */
+  height: 4.5em;                 /* 3行 */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.curve-r{
+  width: 220px;          /* ⭐ 写死宽度 */
+  height: auto;
+  display: block;
+  margin: 8px auto 0;    /* ⭐ 居中 */
+  border: 1px solid #ddd;
+}
+
+
+.videos-4{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  overflow-x: auto;      /* 行太宽就横向滚动 */
+  padding-bottom: 6px;   /* 给滚动条一点空间 */
+}
+
+.video-col-r{
+  flex: 0 0 auto;   /* ⭐ 保持每列按内容宽度，不被压扁 */
+}
+
+.video-label-r{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.video-r{
+  height: 160px;       /* ⭐ 统一高度：你可以改成 140/180/200 */
+  width: auto;         /* ⭐ 宽度按视频比例变化 */
+  object-fit: contain; /* ⭐ 不裁剪；想裁剪填满就改成 cover */
+  display: block;
+  border: 1px solid #ddd;
+  background: #f2f2f2;
+}
+
+/* 小屏时自动降列，避免挤爆（可选） */
+@media (max-width: 1000px){
+  .videos-4{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+  .videos-4{ grid-template-columns: 1fr; }
+}
+
+
+.results-desc {
+  font-size: 24px;          /* 常规正文大小 */
+  line-height: 1.6;
+  color: #444;
+  margin: 8px 0 20px 0;     /* 和下面内容拉开点距离 */
+}
