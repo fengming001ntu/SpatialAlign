@@ -8,4 +8,6 @@ END=0
 python3 \
 inference.py \
 $GPU \
+./eval_csv/eval30.csv \
+30 \
 $CKPT $START $END \
