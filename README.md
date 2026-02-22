@@ -41,6 +41,10 @@ pip install -e DiffSynth-Studio
 ### Model
 Please follow [Wan2.1](https://github.com/Wan-Video/Wan2.1) to download Wan2.1-T2V-1.3B and set the model folder as `../Wan2.1-T2V-1.3B`. We use the ModelScope version by default.
 
+### LoRA checkpoints
+We provide the trained LoRA in [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e).
+Download the LoRA `step=02400.lora_only.ckpt` and put it at `../z_ckpt/exp_dsr/checkpoints/`.
+
 ---
 
 ## Running
@@ -54,7 +58,6 @@ bash run_train.sh
 ```
 
 ### Inference
-The necessary settings are included in `run_inference.sh`. The LoRA checkpoint is also in [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e).
 ```bash
 bash run_inference.sh
 ```
