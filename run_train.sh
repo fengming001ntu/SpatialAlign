@@ -29,5 +29,5 @@ torchrun --nproc_per_node=4 \
   --accumulate_grad_batches 12 \
   --train_batch_size 1 \
   --dataset_path "../data/tensors" \
-  --metadata "../data/metadata.csv" \
+  --metadata "../data/train_metadata.csv" \
   --expname exp_dsr
