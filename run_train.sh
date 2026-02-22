@@ -28,6 +28,6 @@ torchrun --nproc_per_node=4 \
   --use_gradient_checkpointing \
   --accumulate_grad_batches 12 \
   --train_batch_size 1 \
-  --dataset_path "../data/tensors" \
-  --metadata "../data/train_metadata.csv" \
+  --dataset_path "./data/tensors" \
+  --metadata "./data/train_metadata.csv" \
   --expname exp_dsr
