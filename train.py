@@ -288,7 +288,7 @@ class LightningModelForTrain(pl.LightningModule):
         # 7. Logging
         self.log("train/loss_total", total_loss, prog_bar=False)
         self.log("train/loss_dpo", dpo_loss, prog_bar=False)
-        self.log("train/loss_reg", ref_loss, prog_bar=False)
+        self.log("train/loss_reg", reg_loss, prog_bar=False)
         self.log("train/score_pos", score_pos.mean(), prog_bar=False)
         self.log("train/score_neg", score_neg.mean(), prog_bar=False)
         self.log("train/score_margin", (score_pos - score_neg).mean(), prog_bar=False)
