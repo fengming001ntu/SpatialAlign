@@ -11,10 +11,9 @@
 
 <p align="center">
   <!-- 徽章：论文/项目页/许可证/Stars 等 -->
-  <a href="<paper_link>"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg"></a>
-  <a href="<project_page_link>"><img src="https://img.shields.io/badge/Project-Page-blue.svg"></a>
-  <a href="<video_link>"><img src="https://img.shields.io/badge/Video-YouTube-red.svg"></a>
-  <a href="<license_link>"><img src="https://img.shields.io/badge/License-<LICENSE>-green.svg"></a>
+  <a href="<paper>"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg"></a>
+  <a href="<project_page>"><img src="https://img.shields.io/badge/Project-Page-blue.svg"></a>
+  <a href="<demo>"><img src="https://img.shields.io/badge/Video-YouTube-red.svg"></a>
 </p>
 
 ---
@@ -29,14 +28,6 @@
   - …
   - …
   - …
-
----
-
-## 🧾 Paper | Video | Project Page
-- **Paper**: <paper_link>
-- **Project Page**: <project_page_link>
-- **Video**: <video_link>
-- **BibTex**: see [Citation](#-citation)
 
 ---
 
