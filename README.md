@@ -51,7 +51,7 @@ bash run_train.sh
 ```
 
 ### Inference
-The necessary settings are included in `run_inference.sh`.
+The necessary settings are included in `run_inference.sh`. The LoRA checkpoint is also in [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e).
 ```bash
 bash run_inference.sh
 ```
