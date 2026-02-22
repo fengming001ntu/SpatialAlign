@@ -55,6 +55,9 @@ Download the LoRA `step=02400.lora_only.ckpt` and put it at `../z_ckpt/exp_dsr/c
 │           ├── step=02400.lora_only.ckpt
 ├── SpatialAlign
 │       ├── DiffSynth-Studio
+│       ├── data
+│           ├── train_metadata.csv
+│           ├── tensors
 ```
 ---
 
@@ -73,7 +76,7 @@ bash run_eval.sh
 ### Training
 📥 **Training data (tensors + metadata)**: [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e)
 
-Put the model, tensors and metadata to the directories according to `run_train.sh`. 
+Put the model, tensors and metadata to the directories according to `run_train.sh`. Set the GPU ids according to your machine and adjust `accumulate_grad_batches` and `train_batch_size` accordingly.
 ```bash
 bash run_train.sh
 ```
