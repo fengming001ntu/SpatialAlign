@@ -45,17 +45,20 @@ Please follow [Wan2.1](https://github.com/Wan-Video/Wan2.1) to download Wan2.1-T
 We provide the trained LoRA in [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e).
 Download the LoRA `step=02400.lora_only.ckpt` and put it at `../z_ckpt/exp_dsr/checkpoints/`.
 
+### Directory Structure
+```text
+..
+├── Wan2.1-T2V-1.3B
+├── z_ckpt
+│   ├── exp_dsr
+│       ├── checkpoints
+│           ├── step=02400.lora_only.ckpt
+├── SpatialAlign
+│       ├── DiffSynth-Studio
+```
 ---
 
 ## Running
-
-### Training
-📥 **Training data (tensors + metadata)**: [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e)
-
-Put the model, tensors and metadata to the directories according to `run_train.sh`. 
-```bash
-bash run_train.sh
-```
 
 ### Inference
 ```bash
@@ -68,6 +71,12 @@ Install [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2)
 bash run_detection.sh
 bash run_calc_dsr.sh
 ```
+### Training
+📥 **Training data (tensors + metadata)**: [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e)
 
+Put the model, tensors and metadata to the directories according to `run_train.sh`. 
+```bash
+bash run_train.sh
+```
 
 ---
