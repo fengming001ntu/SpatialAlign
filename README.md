@@ -27,9 +27,8 @@ Most text-to-video (T2V) generators prioritize aesthetic quality, but often igno
 ### Install Environment
 Basic setting:
 ```bash
-conda create -n spatialalign python=3.13
+conda env create -f environment.yml
 conda activate spatialalign
-pip install -r requirements.txt
 ```
 Here we use a specific version of [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio/tree/main):
 ```bash
