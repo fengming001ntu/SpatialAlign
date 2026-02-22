@@ -37,7 +37,7 @@ unzip DiffSynth-Studio-bf81de0c881b7beffc60d4e6ace0e69a2915d51b.zip
 mv DiffSynth-Studio-bf81de0c881b7beffc60d4e6ace0e69a2915d51b DiffSynth-Studio
 pip install -e DiffSynth-Studio
 ```
-For detection, futher install [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2)
+
 
 ### Model
 Please follow [Wan2.1](https://github.com/Wan-Video/Wan2.1) to download Wan2.1-1.3B. We use the ModelScope version by default.
@@ -55,5 +55,13 @@ The necessary settings are included in `run_inference.sh`. The LoRA checkpoint i
 ```bash
 bash run_inference.sh
 ```
+
+### Evaluation
+Install [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2)
+```bash
+bash run_detection.sh
+bash run_calc_dsr.sh
+```
+
 
 ---
