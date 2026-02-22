@@ -12,8 +12,7 @@
 <p align="center">
   <!-- 徽章：论文/项目页/许可证/Stars 等 -->
   <a href="<paper>"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg"></a>
-  <a href="<project_page>"><img src="https://img.shields.io/badge/Project-Page-blue.svg"></a>
-  <a href="<demo>"><img src="https://img.shields.io/badge/Video-YouTube-red.svg"></a>
+  <a href="https://fengming001ntu.github.io/SpatialAlign/"><img src="https://img.shields.io/badge/Project-Page-blue.svg"></a>
 </p>
 
 ---
