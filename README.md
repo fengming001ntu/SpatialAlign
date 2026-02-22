@@ -39,6 +39,21 @@ pip install -e DiffSynth-Studio
 ```
 For detection, futher install [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2)
 
+### Model
+Please follow [Wan2.1](https://github.com/Wan-Video/Wan2.1) to download Wan2.1-1.3B. We use the ModelScope version by default.
 
 ### Training
 📥 **Training data (tensors + metadata)**: [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e)
+
+Put the model, tensors and metadata to the directories according to `run_train.sh`. 
+```bash
+bash run_train.sh
+```
+
+### Inference
+The necessary settings are included in `run_inference.sh`.
+```bash
+bash run_inference.sh
+```
+
+---
