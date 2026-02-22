@@ -39,7 +39,7 @@ pip install -e DiffSynth-Studio
 
 
 ### Model
-Please follow [Wan2.1](https://github.com/Wan-Video/Wan2.1) to download Wan2.1-1.3B. We use the ModelScope version by default.
+Please follow [Wan2.1](https://github.com/Wan-Video/Wan2.1) to download Wan2.1-T2V-1.3B and set the model folder as `../Wan2.1-T2V-1.3B`. We use the ModelScope version by default.
 
 ---
 
