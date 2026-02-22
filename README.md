@@ -66,10 +66,9 @@ bash run_inference.sh
 ```
 
 ### Evaluation
-Install [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2)
+Install [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2) at location `../Grounded-SAM-2`.
 ```bash
-bash run_detection.sh
-bash run_calc_dsr.sh
+bash run_eval.sh
 ```
 ### Training
 📥 **Training data (tensors + metadata)**: [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e)
