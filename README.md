@@ -24,12 +24,21 @@ Most text-to-video (T2V) generators prioritize aesthetic quality, but often igno
 
 ## ⚙️ Setup
 
-### Install Environment via Anaconda (Recommended)
+### Install Environment
+Basic setting:
 ```bash
 conda create -n spatialalign python=3.10
 conda activate spatialalign
 pip install -r requirements.txt
 ```
+Here we use a specific version of [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio/tree/main):
+```bash
+unzip DiffSynth-Studio-bf81de0c881b7beffc60d4e6ace0e69a2915d51b.zip
+mv DiffSynth-Studio-bf81de0c881b7beffc60d4e6ace0e69a2915d51b DiffSynth-Studio
+pip install -e DiffSynth-Studio
+```
+For detection, futher install [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2)
+
 
 ## Training
 📥 **Training data (tensors + metadata)**: [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/fengming001_e_ntu_edu_sg/IgCz3bCNT5WLRpCaqvvaIiLBAbNXp3lpfXNBjROqfp4UM3k?e=6dz89e)
