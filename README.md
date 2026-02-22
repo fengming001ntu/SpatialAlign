@@ -27,7 +27,7 @@ Most text-to-video (T2V) generators prioritize aesthetic quality, but often igno
 ### Install Environment
 Basic setting:
 ```bash
-conda create -n spatialalign python=3.10
+conda create -n spatialalign python=3.13
 conda activate spatialalign
 pip install -r requirements.txt
 ```
