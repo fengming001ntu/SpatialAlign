@@ -18,15 +18,7 @@
 ---
 
 ## 📌 Overview
-**TL;DR**: 
-
-- **Problem**: …
-- **Key idea**: …
-- **Output**: (e.g., depth/point/ray maps, video, reconstruction, etc.)
-- **Highlights**:
-  - …
-  - …
-  - …
+Most text-to-video (T2V) generators prioritize aesthetic quality, but often ignoring the spatial constraints in the generated videos. In this work, we present SPATIALALIGN, a self-improvement framework that enhances T2V models’ capabilities to depict Dynamic Spatial Relationships (DSR) specified in text prompts. We present a zeroth-order regularized Direct Preference Optimization (DPO) to fine-tune T2V models towards better alignment with DSR. Specifically, we design DSR-SCORE, a geometry-based metric that quantitatively measures the alignment between generated videos and the specified DSRs in prompts, which is a step forward from prior works that rely on VLM for evaluation. We also conduct a dataset of text-video pairs with diverse DSRs to facilitate the study. Extensive experiments demonstrate that our fine-tuned model significantly outperforms the baseline in spatial relationships. 
 
 ---
 
