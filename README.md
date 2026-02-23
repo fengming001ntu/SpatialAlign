@@ -70,10 +70,6 @@ bash run_inference.sh
 
 ### Evaluation
 Follow [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2), install Grounded-SAM-2 at location `../Grounded-SAM-2`.
-Then install torchmetrics
-```bash
-pip install torchmetrics[multimodal]
-```
 ```bash
 bash run_eval.sh
 ```
