@@ -11,3 +11,8 @@ python3 calc_dsr_score.py \
 
 python3 calc_correctness.py \
   ../z_ckpt/exp_dsr/result_DSRscoreV5_step=02400.lora_only.ckpt_eval_30_det.csv
+
+python3 calc_metric.py \
+  ./eval_csv/eval30.csv \
+  ../z_ckpt/exp_dsr/step=02400.lora_only.ckpt_eval_30 \
+  ../z_ckpt/exp_dsr/step=02400.lora_only.ckpt_eval_30_det
