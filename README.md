@@ -82,3 +82,19 @@ bash run_train.sh
 ```
 
 ---
+
+## 📖 Citation
+
+If you find this work useful for your research, please consider citing:
+
+```bibtex
+@misc{liu2026spatialalignaligningdynamicspatial,
+      title={SPATIALALIGN: Aligning Dynamic Spatial Relationships in Video Generation}, 
+      author={Fengming Liu and Tat-Jen Cham and Chuanxia Zheng},
+      year={2026},
+      eprint={2602.22745},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.22745}, 
+}
+```
